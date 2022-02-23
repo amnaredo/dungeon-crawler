@@ -1,5 +1,4 @@
 use crate::prelude::*;
-
 pub struct Camera {
     pub left_x: i32,
     pub right_x: i32,
@@ -16,7 +15,6 @@ impl Camera {
             bottom_y: player_position.y + DISPLAY_HEIGHT / 2,
         }
     }
-
     pub fn on_player_move(&mut self, player_position: Point) {
         self.left_x = player_position.x - DISPLAY_WIDTH / 2;
         self.right_x = player_position.x + DISPLAY_WIDTH / 2;
