@@ -1,9 +1,11 @@
 mod automata;
+mod drunkard;
 mod empty;
 mod rooms;
 
 use crate::prelude::*;
 use automata::CellularAutomataArchitect;
+use drunkard::DrunkardsWalkArchitect;
 use empty::EmptyArchitect;
 use rooms::RoomsArchitect;
 
@@ -168,7 +170,8 @@ impl MapBuilder {
         // mb
         // let mut architect = EmptyArchitect {};
         // let mut architect = RoomsArchitect {};
-        let mut architect = CellularAutomataArchitect {};
+        // let mut architect = CellularAutomataArchitect {};
+        let mut architect = DrunkardsWalkArchitect {};
         architect.new(rng)
     }
 }
